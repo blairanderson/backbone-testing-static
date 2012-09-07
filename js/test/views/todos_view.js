@@ -1,8 +1,8 @@
-define(['jasmine-html', 
-    'sinon', 
-    'models/todo', 
-    'collections/todos', 
-    'views/todos'], function(jasmine, sinon, Todo, Todos, TodosView) {
+define(['jasmine-html'
+    , 'sinon' 
+    , 'models/todo'
+    , 'collections/todos'
+    , 'views/todos'], function(jasmine, sinon, Todo, Todos, TodosView) {
     describe("TodosView", function() {
         var todo, todos, todosView
 

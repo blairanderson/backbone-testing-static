@@ -1,4 +1,9 @@
-define(['jquery', 'backbone', 'collections/todos', 'views/todos_form', 'views/todos', 'views/contact_manager'], function($, Backbone, Todos, TodosFormView, TodosListView, ContactManagerView) {
+define(['jquery'
+    , 'backbone'
+    , 'collections/todos'
+    , 'views/todos_form'
+    , 'views/todos'
+    , 'views/contact_manager'], function($, Backbone, Todos, TodosFormView, TodosListView, ContactManagerView) {
     var App = Backbone.View.extend({
         initialize: function() {
             this.todos = new Todos()

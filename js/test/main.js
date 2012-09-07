@@ -18,18 +18,19 @@ requirejs.config({
         , 'kalendae': 'jquery'
     }
     , paths: {
-        app: '../app',
-        test: '../test',
-        models: '../app/models',
-        views: '../app/views',
-        collections: '../app/collections'
+        app: '../app'
+        , test: '../test'
+        , models: '../app/models'
+        , views: '../app/views'
+        , collections: '../app/collections'
     }
 })
 
-requirejs(['test/models/todo', 
-    'test/collections/todos', 'test/views/todo_view', 
-    'test/views/todos_view',
-    'test/views/todos_form_view'], function() {
+requirejs(['test/models/todo'
+    , 'test/collections/todos'
+    , 'test/views/todo_view'
+    , 'test/views/todos_view'
+    , 'test/views/todos_form_view'], function() {
     var jasmineEnv = jasmine.getEnv()
 
     var htmlReporter = new jasmine.HtmlReporter()
