@@ -9,7 +9,7 @@ define(['jquery', 'backbone', 'views/todo'], function($, Backbone, TodoView) {
             this.render()
         }
         , render: function() {
-            $this = this
+            var $this = this
             $($this.el).empty()
             this.collection.forEach(function(model) {
                 var todo_view = new TodoView({model: model})

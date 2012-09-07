@@ -28,7 +28,7 @@ define(['jquery', 'kalendae', 'backbone', 'models/todo'], function($, kalendae, 
         }
 
         , template: function() {
-            return '<form><input type="text" id="todo-text" placeholder="Enter a Todo"><input type="text" id="todo-due-at" placeholder="Due at"><input type="submit" id="todo-submit" value="Submit"></form>'
+            return '<input type="checkbox" id="hide-completed"><label>Hide Completed</label><form><input type="text" id="todo-text" placeholder="Enter a Todo"><input type="text" id="todo-due-at" placeholder="Due at"><input type="submit" id="todo-submit" value="Submit"></form>'
         }
     })
 

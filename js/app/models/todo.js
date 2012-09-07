@@ -4,7 +4,13 @@ define(['backbone'], function(Backbone) {
             return new Date() > this.get('dueAt')
         }
         , humanizedOutput: function() {
-            return _.extend(this.toJSON(), {humanizedDueAt: moment(this.get('dueAt')).fromNow()})
+            return _.extend(this.toJSON(), {humanizedDueAt: this.humanizedDueAt, humanizedPastDue: this.humanizedPastDue})
+        }
+        , humanizedDueAt: function() {
+            return moment(this.get('dueAt')).fromNow()
+        }
+        , humanizedPastDue: function() {
+            if (this.isPastDue()) return "past-due"
         }
     })
 
