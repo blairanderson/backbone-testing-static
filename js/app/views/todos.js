@@ -1,6 +1,8 @@
-define(['jquery', 'backbone', 'app/todo_view'], function($, Backbone, TodoView) {
+define(['jquery', 'backbone', 'views/todo'], function($, Backbone, TodoView) {
     var TodosView = Backbone.View.extend({
         tagName: "ul"
+
+        , id: "#todos"
 
         , initialize: function() {
             this.collection.on('add', this.render, this)

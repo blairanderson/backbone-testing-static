@@ -1,5 +1,5 @@
-define(['jquery', 'backbone', 'app/todo'], function($, Backbone, Todo) {
-    var FormView = Backbone.View.extend({
+define(['jquery', 'backbone'], function($, Backbone) {
+    var ContactManagerView = Backbone.View.extend({
 
         events: {
             'click #todo-submit': 'submitForm'
@@ -18,5 +18,5 @@ define(['jquery', 'backbone', 'app/todo'], function($, Backbone, Todo) {
         }
     })
 
-    return FormView
+    return ContactManagerView
 })

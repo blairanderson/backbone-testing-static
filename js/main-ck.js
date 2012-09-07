@@ -1,0 +1,1 @@
+requirejs.config({baseUrl:"js/lib",shim:{backbone:{deps:["underscore","jquery"],exports:"Backbone"},moment:{exports:"moment"}},paths:{app:"../app",models:"../app/models",views:"../app/views",collections:"../app/collections"}});requirejs(["jquery","backbone","views/app"],function(e,t,n){new n({el:e("#content")})});

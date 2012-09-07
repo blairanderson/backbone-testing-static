@@ -10,12 +10,13 @@ requirejs.config({
         }
     }
     , paths: {
-        app: '../app'
+        app: '../app',
+        models: '../app/models',
+        views: '../app/views',
+        collections: '../app/collections'
     }
 })
 
-requirejs(['jquery', 'backbone', 'app/todos', 'app/form_view', 'app/todos_view'], function($, Backbone, Todos, FormView, TodosView) {
-    var todos = new Todos()
-    var formView = new FormView({collection: todos, el: $("form")})
-    var todosView = new TodosView({collection: todos, el: $("#todos")})
+requirejs(['jquery', 'backbone', 'views/app'], function($, Backbone, App) {
+    new App({el: $('#content')})
 })

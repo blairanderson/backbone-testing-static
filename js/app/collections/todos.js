@@ -1,4 +1,4 @@
-define(['jquery', 'backbone', 'app/todo'], function($, Backbone, Todo) {
+define(['jquery', 'backbone', 'models/todo'], function($, Backbone, Todo) {
     var Todos = Backbone.Collection.extend({
         model: Todo
 
