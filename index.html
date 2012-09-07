@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="css/main.css">
+  <script data-main="js/main.js" src="js/require.js"></script>
+</head>
+<body>
+  <h1>Todos</h1>
+  <form>
+    <input type="text" id="todo-text" placeholder="Enter a Todo">
+    <input type="text" id="todo-due-at" data-kal="direction: &quot;today-future&quot;" placeholder="Due at" class="auto-kal">
+    <input type="submit" id="todo-submit" value="Submit">
+  </form>
+  <ul id="todos"></ul>
+  <script src="js/lib/kalendae.js"></script>
+</body>
