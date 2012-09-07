@@ -2,9 +2,7 @@ define(['jquery', 'backbone', 'collections/todos', 'views/todos_form', 'views/to
     var App = Backbone.View.extend({
         initialize: function() {
             this.todos = new Todos()
-            this.mainView = new TodosFormView({collection: this.todos})
-            this.subView = new TodosListView({collection: this.todos})
-            this.render()
+            this.initTodos()
         }
 
         , render: function() {
@@ -13,7 +11,7 @@ define(['jquery', 'backbone', 'collections/todos', 'views/todos_form', 'views/to
             return this;
         }
 
-        , initTodos: function(todos) {
+        , initTodos: function() {
             this.mainView = new TodosFormView({collection: this.todos})
             this.subView = new TodosListView({collection: this.todos})
             this.render()
