@@ -1,4 +1,4 @@
-define(['jquery', 'backbone', 'models/todo'], function($, Backbone, Todo) {
+define(['jquery', 'kalendae', 'backbone', 'models/todo'], function($, kalendae, Backbone, Todo) {
     var FormView = Backbone.View.extend({
         initialize: function() {
             this.render()
@@ -10,6 +10,9 @@ define(['jquery', 'backbone', 'models/todo'], function($, Backbone, Todo) {
 
         , render: function() {
             $(this.el).html(this.template())
+            $(this.el).find('#todo-due-at').kalendae({direction: 'today-future'})
+
+            return this
         }
 
         , submitForm: function(e) {
@@ -25,7 +28,7 @@ define(['jquery', 'backbone', 'models/todo'], function($, Backbone, Todo) {
         }
 
         , template: function() {
-            return '<form><input type="text" id="todo-text" placeholder="Enter a Todo"><input type="text" id="todo-due-at" data-kal="direction: &quot;today-future&quot;" placeholder="Due at" class="auto-kal"><input type="submit" id="todo-submit" value="Submit"></form>'
+            return '<form><input type="text" id="todo-text" placeholder="Enter a Todo"><input type="text" id="todo-due-at" placeholder="Due at"><input type="submit" id="todo-submit" value="Submit"></form>'
         }
     })
 

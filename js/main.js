@@ -7,7 +7,9 @@ requirejs.config({
         },
         'moment': {
             exports: 'moment'
-        }
+        },
+        'string_score': 'string'
+        , 'kalendae': 'jquery'
     }
     , paths: {
         app: '../app',
