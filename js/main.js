@@ -23,5 +23,4 @@ requirejs.config({
 requirejs(['jquery', 'backbone', 'router/router'], function($, Backbone, Router) {
     var router = new Router()
     Backbone.history.start()
-    router.navigate("todos")
 })
