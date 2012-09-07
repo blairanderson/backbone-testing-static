@@ -9,7 +9,7 @@ define(['jquery', 'backbone', 'moment'], function($, Backbone, moment) {
             return this
         }
         , template: function(json) {
-            return _.template("<%= text %><%= humanizedDueAt %>", json)
+            return _.template("<%= text %> <%= humanizedDueAt %>", json)
         }
     })
 

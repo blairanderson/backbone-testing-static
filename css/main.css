@@ -1,3 +1,22 @@
+a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #666;
+    font-family: "Helvetica";
+
+}
+
+a:hover {
+    color: #DDD;
+}
+
+input[type=submit] {
+    background: orange;
+    border: none;
+    padding: 3px 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px black;
+}
 li.completed {
     text-decoration: line-through;
 }

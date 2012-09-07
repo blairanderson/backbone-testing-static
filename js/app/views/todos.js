@@ -6,6 +6,7 @@ define(['jquery', 'backbone', 'views/todo'], function($, Backbone, TodoView) {
 
         , initialize: function() {
             this.collection.on('add', this.render, this)
+            this.render()
         }
         , render: function() {
             $this = this
