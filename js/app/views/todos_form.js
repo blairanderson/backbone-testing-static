@@ -1,4 +1,4 @@
-define(['jquery', 'kalendae', 'backbone', 'models/todo'], function($, kalendae, Backbone, Todo) {
+define(['jquery', 'backbone', 'models/todo', 'kalendae'], function($, Backbone, Todo) {
     var FormView = Backbone.View.extend({
         initialize: function() {
             this.render()
@@ -10,7 +10,7 @@ define(['jquery', 'kalendae', 'backbone', 'models/todo'], function($, kalendae, 
 
         , render: function() {
             $(this.el).html(this.template())
-            $(this.el).find('#todo-due-at').kalendae({direction: 'today-future'})
+            $(this.el).find('#todo-due-at').kalendae()
 
             return this
         }
