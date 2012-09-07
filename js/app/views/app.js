@@ -7,12 +7,6 @@ define(['jquery'
     var App = Backbone.View.extend({
         initialize: function() {
             this.todos = new Todos()
-            this.initTodos()
-        }
-
-        , events: {
-            'click #switch-todos': 'initTodos'
-            , 'click #switch-contact-manager': 'initContactManager'
         }
 
         , render: function() {

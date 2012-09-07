@@ -12,13 +12,16 @@ requirejs.config({
         , 'kalendae': 'jquery'
     }
     , paths: {
-        app: '../app',
-        models: '../app/models',
-        views: '../app/views',
-        collections: '../app/collections'
+        app: '../app'
+        , models: '../app/models'
+        , views: '../app/views'
+        , collections: '../app/collections'
+        , router: '../app/router'
     }
 })
 
-requirejs(['jquery', 'backbone', 'views/app'], function($, Backbone, App) {
-    new App({el: $('#content')})
+requirejs(['jquery', 'backbone', 'router/router'], function($, Backbone, Router) {
+    var router = new Router()
+    Backbone.history.start()
+    router.navigate("todos")
 })
