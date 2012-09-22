@@ -1,6 +1,9 @@
 define(['backbone'], function(Backbone) {
     var Todo = Backbone.Model.extend({
-        isPastDue: function() {
+        defaults: {
+            completed: false
+        }
+        , isPastDue: function() {
             return new Date() > this.get('dueAt')
         }
         , humanizedOutput: function() {

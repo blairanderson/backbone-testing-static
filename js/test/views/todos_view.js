@@ -8,21 +8,21 @@ define(['jasmine-html'
 
         describe("Fake Clock Test", function() {
             it("should allow a clock to be arbitrarily moved", function() {
-                var clock = sinon.useFakeTimers()
+                // var clock = sinon.useFakeTimers()
 
-                var callback = sinon.spy()
+                // var callback = sinon.spy()
 
                 setTimeout(function() {
-                    callback()
+                    // callback()
                 }, 200)
 
-                clock.tick(50)
-                expect(callback.notCalled).toBeTruthy()
+                // clock.tick(50)
+                // expect(callback.notCalled).toBeTruthy()
 
-                clock.tick(150)
+                // clock.tick(150)
                 expect(callback.calledOnce).toBeTruthy()
 
-                clock.restore()
+                // clock.restore()
             })
 
         })
@@ -75,7 +75,7 @@ define(['jasmine-html'
 
                 runs(function() {
                     expect(todosView.collection.models.length).toEqual(3)
-                    expect(todosView.el.outerHTML).toContain("Do Backbone Training")
+                    expect(todosView.render().el.outerHTML).toContain("Do Backbone Training")
                     // server.restore()
                 })
             })
