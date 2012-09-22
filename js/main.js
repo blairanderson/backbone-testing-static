@@ -17,6 +17,7 @@ requirejs.config({
         , views: '../app/views'
         , collections: '../app/collections'
         , router: '../app/router'
+        , templates: '../app/templates'
     }
 })
 
