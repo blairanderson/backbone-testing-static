@@ -20,6 +20,7 @@ define(['jquery', 'backbone', 'models/todo', 'kalendae'], function($, Backbone, 
             var todoText = this.$('#todo-text')
             var todoDueAt = this.$('#todo-due-at')
 
+
             var todo = new Todo({text: todoText.val(), dueAt: new Date(todoDueAt.val())})
             todoText.val('')
             todoDueAt.val('')
@@ -28,7 +29,7 @@ define(['jquery', 'backbone', 'models/todo', 'kalendae'], function($, Backbone, 
         }
 
         , template: function() {
-            return '<input type="checkbox" id="hide-completed"><label>Hide Completed</label><form><input type="text" id="todo-text" placeholder="Enter a Todo"><input type="text" id="todo-due-at" placeholder="Due at"><input type="submit" id="todo-submit" value="Submit"></form>'
+        return '<input type="checkbox" id="hide-completed"><label>Hide Completed</label><form><input type="text" id="todo-text" placeholder="Enter a Todo"><input type="text" id="something" /><input type="text" id="todo-due-at" placeholder="Due at"><input type="submit" id="todo-submit" value="Submit"></form>'
         }
     })
 

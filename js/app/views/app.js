@@ -3,7 +3,7 @@ define(['jquery'
     , 'collections/todos'
     , 'views/todos_form'
     , 'views/todos'
-    , 'views/contact_manager'], function($, Backbone, Todos, TodosFormView, TodosListView, ContactManagerView) {
+    , 'views/contact_manager', 'views/contact_list_view'], function($, Backbone, Todos, TodosFormView, TodosListView, ContactManagerView, ContactListView) {
     var App = Backbone.View.extend({
         initialize: function() {
             this.todos = new Todos()
@@ -23,7 +23,7 @@ define(['jquery'
 
         , initContactManager: function() {
             this.mainView = new ContactManagerView()
-            this.subView = null
+            this.subView = new ContactListView()
             this.render()
         }
     })

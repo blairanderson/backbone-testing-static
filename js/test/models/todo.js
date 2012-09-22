@@ -27,6 +27,7 @@ define(['jasmine-html', 'models/todo'], function(jasmine, Todo) {
             })
 
             it("should not be completed", function() {
+                expect(todo.get('completed')).toBeDefined()
                 expect(todo.get('completed')).toBeFalsy()
             })
         })
@@ -37,7 +38,7 @@ define(['jasmine-html', 'models/todo'], function(jasmine, Todo) {
 
             describe("isPastDue", function() {
                 it("should return true when the todo is past due", function() {
-                    todo = new Todo({dueAt: new Date().getTime() - 200})
+                    todo = new Todo({dueAt: new Date().getTime() + 200})
                     expect(todo.isPastDue()).toBeTruthy()
                 })
 

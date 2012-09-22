@@ -8,21 +8,21 @@ define(['jasmine-html'
 
         describe("Fake Clock Test", function() {
             it("should allow a clock to be arbitrarily moved", function() {
-                // var clock = sinon.useFakeTimers()
+                var clock = sinon.useFakeTimers()
 
-                // var callback = sinon.spy()
+                var callback = sinon.spy()
 
                 setTimeout(function() {
-                    // callback()
+                    callback()
                 }, 200)
 
-                // clock.tick(50)
-                // expect(callback.notCalled).toBeTruthy()
+                clock.tick(50)
+                expect(callback.notCalled).toBeTruthy()
 
-                // clock.tick(150)
+                clock.tick(150)
                 expect(callback.calledOnce).toBeTruthy()
 
-                // clock.restore()
+                clock.restore()
             })
 
         })
@@ -58,7 +58,7 @@ define(['jasmine-html'
                 ]
 
                 runs(function() {
-                    // server = sinon.fakeServer.create()
+                    server = sinon.fakeServer.create()
                     complete = false
                     todos.fetch({success: function() {
                         complete = true
@@ -66,17 +66,17 @@ define(['jasmine-html'
                 })
 
                 waitsFor(function() {
-                    // server.requests[0].respond(200,
-                    //     {"Content-Type": "application/json"},
-                    //     JSON.stringify(mockJSON)
-                    // )
+                    server.requests[0].respond(200,
+                        {"Content-Type": "application/json"},
+                        JSON.stringify(mockJSON)
+                    )
                     return complete
                 })
 
                 runs(function() {
                     expect(todosView.collection.models.length).toEqual(3)
                     expect(todosView.render().el.outerHTML).toContain("Do Backbone Training")
-                    // server.restore()
+                    server.restore()
                 })
             })
         })

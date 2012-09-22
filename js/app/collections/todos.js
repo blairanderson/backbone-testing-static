@@ -1,6 +1,10 @@
-define(['jquery', 'backbone', 'models/todo'], function($, Backbone, Todo) {
+define(['backbone', 'models/todo'], function(Backbone, Todo) {
     var Todos = Backbone.Collection.extend({
-        model: Todo
+        url: '/todos'
+        , model: Todo
+        , defaults: {
+            complete: false
+        }
         , getComplete: function() {
             return this.where({"completed": true})
         }

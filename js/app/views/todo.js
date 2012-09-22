@@ -6,6 +6,10 @@ define(['jquery', 'backbone', 'moment', 'tpl!templates/todo.html'], function($, 
         }
         , render: function() {
             $(this.el).html(tpl(this.model.humanizedOutput()))
+
+            if (this.model.isPastDue()) {
+                this.$el.addClass('past-due')
+            } 
             return this
         }
     })
